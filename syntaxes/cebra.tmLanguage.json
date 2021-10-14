@@ -57,7 +57,7 @@
         "accessors": {
             "patterns": [
                 {
-                    "name": "meta.cebra",
+                    "name": "variable.parameter.cebra",
                     "match": "(?<=\\.)\\w*"
                 }
             ]
@@ -91,6 +91,6 @@
                 }
             ]
         }
-	},
-	"scopeName": "source.cebra"
+    },
+    "scopeName": "source.cebra"
 }
