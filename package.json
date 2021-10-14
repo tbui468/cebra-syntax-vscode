@@ -1,0 +1,25 @@
+{
+    "name": "cebra-syntax-highlighter",
+    "displayName": "Cebra Syntax Highlighter",
+    "description": "Syntax highlighter for Cebra scripting language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cebra",
+            "aliases": ["cebra", "cebra"],
+            "extensions": [".cbr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cebra",
+            "scopeName": "source.cebra",
+            "path": "./syntaxes/cebra.tmLanguage.json"
+        }]
+    }
+}
