@@ -2,14 +2,66 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "cebra",
 	"patterns": [
+        {
+            "include": "#comments"
+        },
 		{
 			"include": "#keywords"
 		},
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#accessors"
+        },
 		{
 			"include": "#strings"
-		}
+		},
+        {
+            "include": "#constants"
+        }
 	],
 	"repository": {
+		"comments": {
+			"patterns": [
+                {
+                    "name": "comment.line.double-slash.cebra",
+                    "match": "\\/\\/.*"
+                },
+                {
+                    "name": "keyword.control.cebra",
+                    "match": "\\b(if|else|while|for|foreach|when|is|struct|enum|and|or|as)\\b"
+                },
+                {
+                    "name": "keyword.control.cebra",
+                    "match": "(::|:=|:|==|!=|<=|>=|=|\\+|\\*|\\/|->|-)"
+                }
+			]
+		},
+		"types": {
+			"patterns": [
+                {
+                    "name": "storage.type.cebra",
+                    "match": "\\b(List|Map|string|int|float|bool)\\b"
+                },
+                {
+                    "name": "entity.name.cebra",
+                    "match": "\\w+(?=\\()"
+                },
+                {
+                    "name": "entity.name.type.cebra",
+                    "match": "\\w*\\s*(?=::\\s*\\()"
+                }
+            ]
+		},
+        "accessors": {
+            "patterns": [
+                {
+                    "name": "meta.cebra",
+                    "match": "(?<=\\.)\\w*"
+                }
+            ]
+        },
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.cebra",
@@ -26,7 +78,19 @@
 					"match": "\\\\."
 				}
 			]
-		}
+		},
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.cebra",
+                    "match": "\\b(\\d+\\.\\d*|\\d*\\.\\d+|\\d+)\\b"
+                },
+                {
+                    "name": "constant.language.cebra",
+                    "match": "\\b(true|false|nil)\\b"
+                }
+            ]
+        }
 	},
 	"scopeName": "source.cebra"
 }
