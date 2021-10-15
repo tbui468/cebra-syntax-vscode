@@ -41,12 +41,12 @@
 		"types": {
 			"patterns": [
                 {
-                    "name": "storage.type.cebra",
-                    "match": "\\b(List|Map|string|int|float|bool)\\b"
+                    "name": "entity.name.type.cebra",
+                    "match": "\\w+(?=\\()"
                 },
                 {
-                    "name": "entity.name.cebra",
-                    "match": "\\w+(?=\\()"
+                    "name": "storage.type.cebra",
+                    "match": "\\b(List|Map|string|int|float|bool)\\b"
                 },
                 {
                     "name": "entity.name.type.cebra",
