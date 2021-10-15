@@ -2,6 +2,7 @@
     "name": "cebra-syntax-highlighter",
     "displayName": "Cebra Syntax Highlighter",
     "description": "Syntax highlighter for Cebra scripting language.",
+    "icon": "https://raw.githubusercontent.com/tbui468/cebra-syntax-vscode/main/images/icon.png",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.61.0"
