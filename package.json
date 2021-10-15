@@ -1,26 +1,45 @@
 {
-    "name": "cebra-syntax-highlighter",
-    "displayName": "Cebra Syntax Highlighter",
-    "description": "Syntax highlighter for Cebra scripting language.",
-    "icon": "images/icon.png",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.61.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "cebra",
-            "aliases": ["cebra", "cebra"],
-            "extensions": [".cbr"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "cebra",
-            "scopeName": "source.cebra",
-            "path": "./syntaxes/cebra.tmLanguage.json"
-        }]
-    }
+	"name": "cebra-syntax-highlighter",
+	"displayName": "Cebra Syntax Highlighter",
+	"description": "Syntax highlighter for Cebra scripting language.",
+	"icon": "images/icon.png",
+	"publisher": "cebra-lang",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tbui468/cebra-syntax-vscode.git"
+	},
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "cebra",
+				"aliases": [
+					"cebra",
+					"cebra"
+				],
+				"extensions": [
+					".cbr"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "cebra",
+				"scopeName": "source.cebra",
+				"path": "./syntaxes/cebra.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "6dcef0d7-4fa3-4bd6-94ad-3b6952718263",
+		"publisherDisplayName": "cebra-lang",
+		"publisherId": "f1db85a7-137c-481c-be84-8842c2f70242"
+	}
 }
